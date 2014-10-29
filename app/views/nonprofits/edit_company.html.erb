@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <h1>Edit Your Company</h1>
+  </head>
+    <body>
+      <div class="mikecontainer">
+        <%= form_for @nonprofit do |f| %>
+          <p>Business name</p>
+          <%= f.text_field :business_name %>
+            </br>
+          <p>Business location</p>
+          <%= f.text_field :business_location %>
+            </br>
+          <p>Business Description</p>
+          <%= f.text_field :business_description %>
+            </br><br>
+          <%= f.submit "submit" %>
+        <% end %>
+      </div>
+    </body>
+</html>

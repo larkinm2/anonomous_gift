@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="mikecontainer">
+  <div class="text-center">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+    <body>
+    <h1>Edit your User profile</h1>
+      <%= form_for @user do |f| %>
+        <p>Enter email</p>
+        <div class="login2">
+        <%= f.text_field :email %>
+        </div>
+        <p>Enter first name</p>
+        <div class="login2">
+        <%= f.text_field :first_name %>
+        </div>
+        <p>Enter last name</p>
+        <div class="login2">
+        <%= f.text_field :last_name %>
+        </div>
+        <p>Enter phone #</p>
+        <div class="login2">
+        <%= f.text_field :phone %>
+        </div>
+          </br><br>
+          <div class="login2">
+        <%= f.submit "update" %>
+      </div>
+      <% end %>
+    </body>
+  </div>
+</div>
+</html>

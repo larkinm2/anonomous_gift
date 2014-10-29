@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+  <body>
+            <div class="mikecontainer">
+  <div class="text-center">
+  <h1>Create an account!</h1>
+  <br>
+    <%= form_for @user do |f| %>
+      <p>Enter email</p>
+      <div class="login">
+      <%= f.text_field :email %>
+      </div>
+      <p>Enter first name</p>
+      <div class="login">
+      <%= f.text_field :first_name %>
+      </div>
+      <p>Enter last name</p>
+      <div class="login">
+      <%= f.text_field :last_name %>
+      </div>
+      <p>Enter phone #</p>
+      <div class="login">
+      <%= f.text_field :phone %>
+    </div>
+      <p>Enter password</p>
+      <div class="login">
+      <%= f.password_field :password %>
+    </div>
+      <p>Confirm password</p>
+      <div class="login">
+      <%= f.password_field :password_confirmation %>
+    </div>
+      <p>Are you a company?</p>
+      <p>Yes</p>
+      <%= radio_button_tag(:user_type, "company") %>
+      <p>No</p>
+      <%= radio_button_tag(:user_type, "individual") %>
+      </br>
+      <%= f.submit "create account!" %>
+    <% end %>
+  </div>
+  </body>
+</html>

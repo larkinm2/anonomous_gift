@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <h1>Edit Gift</h1>
+  </head>
+    <body>
+      <%= form_for(@gift, :url=> {:action=> (@gift.new_record? ? 'create' : 'update')}) do |f| %>
+        <p>Enter Gift</p>
+        <%= f.text_field :body %>
+        </br>
+        <%= f.submit "update" %>
+      <% end %>
+    </body>
+</html>

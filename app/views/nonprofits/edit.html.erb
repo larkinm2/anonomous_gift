@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <h1>EDIT YOUR NONPROFITFORM</h1>
+  </head>
+    <body>
+      <%= form_for @nonprofit do |f| %>
+      <p>Enter Business Name</p>
+        <%= f.text_field :business_name %>
+          </br>
+        <p>Enter Address</p>
+        <%= f.text_field :address %>
+          </br>
+        <p>Enter your description</p>
+        <%= f.text_field :description %>
+          </br>
+        <%= f.submit "update" %>
+      <% end %>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <h1>My NonProfit</h1>
+  </head>
+    <body>
+      <div class="text-center">
+        <div class="mikecontainer">
+          <% if @user.nonprofits.empty? == false %>
+          <% @user.nonprofits.each do |nonprofit| %>
+            <div class="logincontainer">
+              <%= link_to(nonprofit[:nickname],nonprofit_path(nonprofit)) %>
+      </div>
+                </br>
+          <% end %>
+          <% else %>
+                    <p>Whoa! Looks like you haven't made a nonprofit yet! <%= link_to("Make one!", new_nonprofit_path) %></p>
+          <%end %>
+                </br>
+          <%= link_to 'Back', :back %>
+            </div>
+    </body>
+</html>

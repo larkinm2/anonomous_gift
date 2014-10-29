@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>COMPANY Nonprofit</title>
+  </head>
+    <body>
+        <div class="text-center">
+          <div class="mikecontainer">
+      <%= @nonprofit.business_name %></br>
+      <%= @nonprofit.address %></br>
+      <%= @nonprofit.description %></br>
+
+
+      </br></br><br><br>
+            Gifts for this nonprofit
+            </br>
+              <% @nonprofit.gifts.each do |gift| %>
+                <%= link_to(gift[:body], nonprofit_gift_path(@nonprofit, gift)) %>
+                  </br>
+              <% end %>
+                  </br>
+              <% if authorized? || admin? %>
+                <%= link_to("Edit this nonprofit", edit_nonprofit_path(@nonprofit)) %>
+                  </br>
+                <%= link_to("Make a new gift for this nonprofit", new_nonprofit_gift_path(@nonprofit)) %>
+                  </br>
+                <%= link_to 'Delete this nonprofit', @nonprofit, method: :delete, data: { confirm: "Are you sure you want to delete this nonprofit? It can't be undone!"  } %>
+                  </br>
+              <% end %>
+                <%= link_to 'Back', :back %>
+
+        </div>
+          </div>
+
+    </body>
+</html>

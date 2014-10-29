@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <canvas id="canvas"></canvas>
+    </head>
+      <body>
+        <p><%= form_tag('/gifts/search', method: "post") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+        </p>
+              <div class="row">
+                <ul>
+                <% @gifts.each do |gift| %>
+                  <li class="col-sm-6 col-sm-6">
+                    <% if gift.user.user_type == "company" %>
+                            <div class="button">
+                      <div class ="thumbnailz">
+                    <% else %>
+                    <div class="button">
+                      <div class ="thumbnailz">
+                    <% end %>
+                      <div class="caption">
+                        <%= gift.body%>
+                        <br>
+                        <%= gift.gift_type %>
+                          </br><br>
+                          <div class="clickable">
+                      <%= button_to("Send It", nonprofit_path(gift.nonprofit_id), class: 'btn btn-large btn-primary', method: :get)  %>
+                    </div>
+                    </div>
+                  </div>
+                  </li>
+                    <% end %>
+                </ul>
+              </div>
+                      </div>
+                      </div>
+      </body>
+  </html>
+

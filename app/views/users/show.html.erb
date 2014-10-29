@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="mikecontainer">
+  <head>
+    <h1>Hey, <%= @user.first_name %>!</h1>
+    <meta charset="UTF-8">
+  </head>
+    <body>
+      <%= link_to("All gifts", gifts_path) %>
+        <br>
+      <%= link_to( "Edit your profile", edit_user_path ) %>
+        <br>
+      <%= link_to 'Delete Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <br>
+    </body>
+  </div>
+</html>

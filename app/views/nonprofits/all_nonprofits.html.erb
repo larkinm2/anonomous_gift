@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <h1>These are the Non-Profits you created</h1>
+  </head>
+    <body>
+      <% @nonprofits.each do |nonprofit| %>
+      <%= link_to(nonprofit.description, nonprofit_path(nonprofit)) %>
+      </br>
+      <% end %>
+    </body>
+  </html>

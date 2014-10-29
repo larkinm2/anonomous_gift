@@ -1,0 +1,44 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+  <body>
+      <div class="text-center">
+    </div>
+      </div>
+        <div class="mikecontainer">
+          <div class="text-center">
+            <p>Login!</p>
+              <br>
+            </div>
+              <br>
+            <%= form_tag(session_path) do %>
+              <div class="text-center">
+                <%= label_tag(:email) %>
+              </div>
+              <div class="login">
+                <%= text_field_tag(:email) %>
+              </div>
+              <div class="text-center">
+                <%= label_tag(:password) %>
+              </div>
+              <div class="login">
+                <%= password_field_tag(:password) %>
+              </div>
+              <div class="login">
+                <%= submit_tag('Login') %>
+              </div>
+            <% end %>
+              <p style="color: red"><%= flash[:error] %> </p>
+                <div class="text-center"
+                  <p><%= link_to('Sign up', new_user_path) %></p>
+                </div>
+              </div>
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <h1>Make a New Gift!</h1>
+    </head>
+      <body>
+        <%= form_for(@gift, :url=> {:action=> (@gift.new_record? ? 'create' : 'update')}) do |f| %>
+          <p>What's your gift?</p>
+          <%= f.text_field :body %>
+          <%= f.text_field :gift_type %>
+          <%= f.hidden_field :user_type, :value => @user_type %>
+          </br><br>
+          <%= f.submit "Create Gift!" %>
+        <% end %>
+      </body>
+  </html>

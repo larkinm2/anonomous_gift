@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <div class="mikecontainer">
+      <div class="text-center">
+    <h1>This is your gift</h1>
+  </head>
+    <body>
+  <br>
+  <br>
+      <p><%= @gift.body %></p>
+      <p><%= @gift.gift_type %></p>
+
+        </br>
+            <%= link_to 'Claim this gift', nonprofit_gift_path(@nonprofit, @gift), method: :delete, data: { confirm: "Are you sure you want to delete this gift? It can't be undone!"  } %>
+        </br>
+            <%= link_to 'back', :back %>
+    </body>
+  </div>
+</html>
