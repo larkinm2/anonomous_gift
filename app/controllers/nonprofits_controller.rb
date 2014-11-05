@@ -10,7 +10,6 @@ class NonprofitsController < ApplicationController
     @nonprofit = Nonprofit.new
     @user_id = session[:user_id]
     @user = User.find(@user_id)
-    # binding.pry
     if @user.user_type == "individual"
       render :individual_form
     elsif @user.user_type == "company"
@@ -21,7 +20,6 @@ class NonprofitsController < ApplicationController
   end
 
   def show
-    #need two pages here, if @nonprofits.user.user_type ==,,etc
     if @nonprofit.user.user_type == "company"
       render :company_nonprofit
     elsif @nonprofit.user.user_type == "individual"

@@ -13,10 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
 body {
   /*You can use any kind of background here.*/
-  background: url(http://www.freeimages.com/pic/l/k/kr/krappweis/1409825_37790746.jpg) no-repeat fixed center;
+  background: url(http://www.freeimages.com/pic/l/g/ga/garwee/1278046_49583201.jpg) no-repeat fixed center;
   padding-top: 70px;
 }
 canvas {

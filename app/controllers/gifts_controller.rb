@@ -12,8 +12,8 @@ class GiftsController < ApplicationController
   end
 
   def search
-  search = params[:q]
-  @gifts = Gift.where('lower(body) like ?', "%#{search}%")
+    search = params[:q]
+    @gifts = Gift.where('lower(body) like ?', "%#{search}%")
   end
 
 
@@ -77,13 +77,10 @@ class GiftsController < ApplicationController
   end
 
   private
+
   def gift_params
     params.require(:gift).permit(:body, :user_type)
   end
-
-
-
-
 
 
 end

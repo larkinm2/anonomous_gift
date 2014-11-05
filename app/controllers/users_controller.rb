@@ -41,25 +41,16 @@ before_action :authorize, only: [:show, :edit, :destroy, :update,]
   end
 
   def update
-    # binding.pry
     user = User.find(params[:id])
-    # binding.pry
     user.update(user_params)
-    # binding.pry
     user.save
-    # binding.pry
     redirect_to user_path(user)
   end
 
   private
-  # these are helper funcitons
   def user_params
     params.require(:user).permit(:password, :first_name, :last_name, :email, :phone, :company, :user_type)
   end
-
-  # def user_exists?
-  #   redirect_to root_path if !User.exists?(params[:id])
-  # end
 
   def load_user
 
@@ -69,11 +60,11 @@ before_action :authorize, only: [:show, :edit, :destroy, :update,]
   end
 
   def authenticate
-    redirect_to root_path if !logged_in?#if the sessions u?er is returning nil, let's redirect to login
+    redirect_to root_path if !logged_in?
   end
 
   def authorize
-    if current_user != @user #here we are making sure that the user coming from params is the same as the user in params
+    if current_user != @user
       redirect_to user_path(current_user)
     end
   end
