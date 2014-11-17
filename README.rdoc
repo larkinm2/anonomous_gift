@@ -32,6 +32,8 @@ As a user, I can search by keywords.
 
 
 
+
+
 Anonymous gifts was made using:
 
 
@@ -44,6 +46,12 @@ Html 5
 CSS
 
 Bootstrap 
+
+
+
+
+
+
 
 To run type these commands into terminal:
 
