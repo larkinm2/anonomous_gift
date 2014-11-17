@@ -1,0 +1,46 @@
+Anonomous Gift is an app used to connect underprivlidged children to anonymous gifts. 
+Nonprofits can logon and create anonomous gifts. The gifts should say who the gift is going to (Ex: Male 14 years old) and what type of gits they want to recieve (Ex: Socks). 
+Anonymous donors can logon and select a gift. After selecting, they can claim a gift fron an organization. By claiming the gift is deleted from the main page, and an email is sent to the nonprofit that posted it telling them to expect the gift.
+
+As a user, I should be able to sign up and become a user.
+
+As a user, I should be able to go to the homepage and log in.
+
+As a user, I should be able to choose my role, nonprofit or individual.
+
+As a user, I should be able to create a nonprofit.
+
+As a user, I should be able to create a gift.
+
+As a user, I should be able to see all of the gifts.
+
+As a user, I should be able to see all available nonprofits.
+
+As a user, I may edit my own gifts.
+
+As a user, I can edit my own nonprofit.
+
+As a user, I can delete my nonprofit.
+
+As a user, I can delete my gifts.
+
+As a user, I can search by keywords.
+
+
+Anonymous gifts was made using:
+
+Ruby on Rails 
+Javacript (JQuery)
+Html 5
+CSS
+Bootstrap
+
+To run type these commands into terminal:
+Bundle Install
+Rake db:create
+Rake db:migrate
+Rake db:seed
+Rails S
+
+Feel free to contact me with any questions.
+
