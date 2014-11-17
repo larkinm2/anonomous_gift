@@ -27,20 +27,20 @@ As a user, I can delete my gifts.
 As a user, I can search by keywords.
 
 
-Anonymous gifts was made using:
+Anonymous gifts was made using: <br> <br>
 
-Ruby on Rails 
-Javacript (JQuery)
-Html 5
-CSS
-Bootstrap
+Ruby on Rails <br>
+Javacript (JQuery) <br>
+Html 5 <br>
+CSS <br>
+Bootstrap <br>
 
-To run type these commands into terminal:
-Bundle Install
-Rake db:create
-Rake db:migrate
-Rake db:seed
-Rails S
+To run type these commands into terminal: <br> <br>
+Bundle Install <br>
+Rake db:create <br>
+Rake db:migrate <br>
+Rake db:seed <br>
+Rails S <br>
 
 Feel free to contact me with any questions.
 
